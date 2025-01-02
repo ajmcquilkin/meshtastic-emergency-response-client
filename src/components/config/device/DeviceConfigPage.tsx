@@ -111,9 +111,6 @@ export const DeviceConfigPage = ({
             <option value="2">
               {t("config.radio.device.deviceRole.router")}
             </option>
-            <option value="3">
-              {t("config.radio.device.deviceRole.routerClient")}
-            </option>
             <option value="4">
               {t("config.radio.device.deviceRole.repeater")}
             </option>
@@ -122,6 +119,19 @@ export const DeviceConfigPage = ({
             </option>
             <option value="6">
               {t("config.radio.device.deviceRole.sensor")}
+            </option>
+            <option value="7">{t("config.radio.device.deviceRole.tak")}</option>
+            <option value="8">
+              {t("config.radio.device.deviceRole.clientHidden")}
+            </option>
+            <option value="9">
+              {t("config.radio.device.deviceRole.lostFound")}
+            </option>
+            <option value="10">
+              {t("config.radio.device.deviceRole.takTracker")}
+            </option>
+            <option value="11">
+              {t("config.radio.device.deviceRole.routerLate")}
             </option>
           </ConfigSelect>
 

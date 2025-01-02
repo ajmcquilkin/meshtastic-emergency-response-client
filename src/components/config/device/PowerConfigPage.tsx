@@ -104,7 +104,7 @@ export const PowerConfigPage = ({ className = "" }: IPowerConfigPageProps) => {
       >
         <div className="flex flex-col gap-6">
           <ConfigInput
-            type="checkbox"
+            type="switch"
             text={t("config.radio.power.enablePowerSaving")}
             error={errors.isPowerSaving?.message as string}
             {...register("isPowerSaving")}

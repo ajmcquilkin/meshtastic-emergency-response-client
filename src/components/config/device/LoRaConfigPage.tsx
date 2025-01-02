@@ -160,20 +160,23 @@ export const LoRaConfigPage = ({ className = "" }: ILoRaConfigPageProps) => {
             <option value="1">
               {t("config.radio.lora.modemPreset.longSlow")}
             </option>
-            <option value="2">
-              {t("config.radio.lora.modemPreset.veryLongSlow")}
-            </option>
             <option value="3">
               {t("config.radio.lora.modemPreset.medSlow")}
             </option>
             <option value="4">
-              {t("config.radio.lora.modemPreset.shortSlow")}
+              {t("config.radio.lora.modemPreset.medFast")}
             </option>
             <option value="5">
-              {t("config.radio.lora.modemPreset.shortFast")}
+              {t("config.radio.lora.modemPreset.shortSlow")}
             </option>
             <option value="6">
+              {t("config.radio.lora.modemPreset.shortFast")}
+            </option>
+            <option value="7">
               {t("config.radio.lora.modemPreset.longModerate")}
+            </option>
+            <option value="8">
+              {t("config.radio.lora.modemPreset.shortTurbo")}
             </option>
           </ConfigSelect>
 

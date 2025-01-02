@@ -202,7 +202,12 @@
           "routerClient": "Router + Client",
           "repeater": "Repeater",
           "tracker": "Tracker",
-          "sensor": "Sensor"
+          "sensor": "Sensor",
+          "tak": "Tak",
+          "clientHidden": "Client (hidden)",
+          "lostFound": "Lost and Found",
+          "takTracker": "Tak Tracker",
+          "routerLate": "Router Late"
         },
         "serialEnabled": "Serial Enabled",
         "serialDebugEnabled": "Serial Debug Enabled",
@@ -279,11 +284,12 @@
           "title": "Modem Preset",
           "longFast": "Long Fast",
           "longSlow": "Long Slow",
-          "veryLongSlow": "Very Long Slow",
+          "medFast": "Medium Fast",
           "medSlow": "Medium Slow",
           "shortSlow": "Short Slow",
           "shortFast": "Short Fast",
-          "longModerate": "Long Moderate"
+          "longModerate": "Long Moderate",
+          "shortTurbo": "Short Turbo"
         },
         "bandwidth": "Bandwidth (kHz)",
         "spreadFactor": "Spread Factor (1 << spread_factor)",
