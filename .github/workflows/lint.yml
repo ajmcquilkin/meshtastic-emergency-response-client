@@ -18,5 +18,8 @@ jobs:
       - name: Install frontend dependencies
         run: pnpm install
 
-      - name: Run Biome
-        run: pnpm run ui:check:ci
+      - name: Run Biome (Formatting, Linting)
+        run: pnpm biome ci src --config-path=.
+
+      - name: Run TypeScript
+        run: pnpm tsc --noEmit
