@@ -12,8 +12,8 @@
     "ui:build": "tsc && vite build",
     "ui:lint": "biome lint src",
     "ui:format": "biome format --write src",
-    "ui:check": "biome check src",
-    "ui:check:ci": "biome ci src --config-path=.",
+    "ui:check": "tsc --noEmit && biome check src",
+    "ui:check:ci": "tsc --noEmit && biome ci src --config-path=.",
     "ui:test": "jest --passWithNoTests",
     "ui:preview": "vite preview"
   },

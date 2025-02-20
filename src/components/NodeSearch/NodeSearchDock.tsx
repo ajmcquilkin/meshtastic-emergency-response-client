@@ -1,7 +1,7 @@
 import { ChevronDownIcon, ChevronUpIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { useMap } from "react-map-gl";
+import { useMap } from "react-map-gl/maplibre";
 import { useDispatch, useSelector } from "react-redux";
 
 import type {
