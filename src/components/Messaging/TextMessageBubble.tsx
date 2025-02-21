@@ -1,7 +1,7 @@
 import { MapIcon } from "lucide-react";
 import maplibregl from "maplibre-gl";
 // biome-ignore lint/suspicious/noShadowRestrictedNames: Need named export
-import { Map, ScaleControl } from "react-map-gl";
+import { Map, ScaleControl } from "react-map-gl/maplibre";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
@@ -105,7 +105,6 @@ export const TextMessageBubble = ({
                   borderRadius: "0px 0px 8px 8px",
                 }}
                 id={getWaypointMapId(message.payload.data.id)}
-                mapLib={maplibregl}
                 mapStyle={style}
                 interactive={false}
                 initialViewState={{

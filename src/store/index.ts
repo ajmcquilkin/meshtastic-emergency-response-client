@@ -1,4 +1,4 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore, MiddlewareArray } from "@reduxjs/toolkit";
 import { logger } from "redux-logger";
 
 import { appConfigReducer } from "@features/appConfig/slice";
@@ -24,7 +24,9 @@ export const store = configureStore({
     ui: uiReducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({ thunk: false }).concat(middleware),
+    getDefaultMiddleware({ thunk: false }).concat(
+      middleware as MiddlewareArray<[]>,
+    ),
   devTools: true,
 });
 

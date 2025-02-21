@@ -11,7 +11,6 @@ import * as Popover from "@radix-ui/react-popover";
 import * as Select from "@radix-ui/react-select";
 import debounce from "lodash.debounce";
 import { Locate, Plus, X } from "lucide-react";
-import maplibregl from "maplibre-gl";
 import moment from "moment";
 import { ChangeEventHandler, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -23,7 +22,7 @@ import {
   NavigationControl,
   ScaleControl,
   useMap,
-} from "react-map-gl";
+} from "react-map-gl/maplibre";
 import { useDispatch, useSelector } from "react-redux";
 import { warn } from "tauri-plugin-log-api";
 
@@ -184,8 +183,8 @@ export const CreateWaypointDialog = ({
   const handlePositionUpdate = useMemo(
     () =>
       debounce<(e: MarkerDragEvent) => void>((e) => {
-        setWaypointPosition(e.lngLat);
-        flyToPosition(e.lngLat);
+        setWaypointPosition(e.lngLat as LngLat);
+        flyToPosition(e.lngLat as LngLat);
       }, 300),
     [flyToPosition],
   );
@@ -257,7 +256,6 @@ export const CreateWaypointDialog = ({
               }}
               id={MapIDs.CreateWaypointDialog}
               mapStyle={style}
-              mapLib={maplibregl}
               initialViewState={{
                 latitude: waypointPosition.lat,
                 longitude: waypointPosition.lng,

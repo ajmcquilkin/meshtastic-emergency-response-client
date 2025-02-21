@@ -17,7 +17,7 @@ import {
   ViewState,
   ViewStateChangeEvent,
   useControl,
-} from "react-map-gl";
+} from "react-map-gl/maplibre";
 import { useDispatch, useSelector } from "react-redux";
 import { useDebounce } from "react-use";
 
