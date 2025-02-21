@@ -161,8 +161,10 @@ export const MapView = () => {
           className="relative w-full h-full z-0"
           onContextMenu={(e) => e.preventDefault()}
         >
-          {nodeHoverInfo && <MapNodeTooltip hoverInfo={nodeHoverInfo} />}
-          {edgeHoverInfo && <MapEdgeTooltip hoverInfo={edgeHoverInfo} />}
+          <div className="z-40">
+            {nodeHoverInfo && <MapNodeTooltip hoverInfo={nodeHoverInfo} />}
+            {edgeHoverInfo && <MapEdgeTooltip hoverInfo={edgeHoverInfo} />}
+          </div>
 
           {/* Map translation is a pain, assuming users will use translated map tiles https://maplibre.org/maplibre-gl-js/docs/examples/language-switch/ */}
 
@@ -183,6 +185,7 @@ export const MapView = () => {
               <Marker
                 latitude={lastRightClickLngLat.lat}
                 longitude={lastRightClickLngLat.lng}
+                style={{ zIndex: 30 }}
               >
                 <div className="translate-y-1/2">
                   {/* https://www.kindacode.com/article/how-to-create-triangles-with-tailwind-css-4-examples/ */}
@@ -244,22 +247,23 @@ export const MapView = () => {
                       ),
                     )
                   }
+                  style={{ zIndex: 10 }}
                 />
               ))}
           </Map>
 
-          {/* Popups */}
-          {showInfoPane === "waypoint" ? (
-            <WaypointMenu
-              editWaypoint={(w) => {
-                setWaypointDialogOpen(true);
-                setEditingWaypoint(w);
-              }}
-            />
-          ) : null}
-
-          <NodeSearchDock />
-          <MapSelectedNodeMenu />
+          <div className="z-20">
+            <NodeSearchDock />
+            <MapSelectedNodeMenu />
+            {showInfoPane === "waypoint" ? (
+              <WaypointMenu
+                editWaypoint={(w) => {
+                  setWaypointDialogOpen(true);
+                  setEditingWaypoint(w);
+                }}
+              />
+            ) : null}
+          </div>
         </div>
 
         {(lastRightClickLngLat || editingWaypoint) && (

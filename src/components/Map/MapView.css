@@ -126,3 +126,7 @@
     color: rgb(209 213 219 / var(--tw-text-opacity)) !important;
   }
 }
+
+#deckgl-overlay {
+  z-index: 10;
+}

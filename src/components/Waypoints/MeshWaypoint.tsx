@@ -5,7 +5,7 @@ import { WaypointIcon } from "@components/Waypoints/WaypointIcon";
 
 // This component returns a marker for each individual waypoint. It is called from MapView.tsx
 export interface IMeshWaypointProps
-  extends Pick<MarkerProps, "draggable" | "onDragEnd"> {
+  extends Pick<MarkerProps, "draggable" | "onDragEnd" | "style"> {
   waypoint: app_device_NormalizedWaypoint;
   isSelected: boolean;
   onClick?: () => void;

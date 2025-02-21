@@ -65,7 +65,7 @@ export const WaypointMenu = ({ editWaypoint }: IWaypointMenuProps) => {
     activeWaypoint;
 
   return (
-    <div className="absolute top-24 right-9 bg-white dark:bg-gray-800 p-6 rounded-lg drop-shadow-lg w-96">
+    <div className="absolute top-24 right-9 bg-white dark:bg-gray-800 p-6 rounded-lg drop-shadow-lg w-96 z-[inherit]">
       <button
         className="absolute top-6 right-6"
         type="button"
