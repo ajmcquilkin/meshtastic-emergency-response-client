@@ -23,8 +23,6 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 8
 
       - name: Install Rust stable
         uses: dtolnay/rust-toolchain@stable
@@ -51,7 +49,7 @@ jobs:
     strategy:
       matrix:
         platform: [macos-latest, ubuntu-22.04, windows-latest, ubuntu-22.04-arm]
-        node-version: [18]
+        node-version: [22]
 
     runs-on: ${{ matrix.platform }}
     steps:
@@ -60,8 +58,6 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 8
 
       - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
