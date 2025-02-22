@@ -1,7 +1,5 @@
 import { useTranslation } from "react-i18next";
 
-import MeshLogoDark from "@app/assets/Mesh_Logo_Dynamic.svg";
-import MeshLogoLight from "@app/assets/Mesh_Logo_Dynamic.svg";
 import { MeshtasticLogo } from "@app/assets/Meshtastic";
 
 import { useIsDarkMode } from "@utils/hooks";

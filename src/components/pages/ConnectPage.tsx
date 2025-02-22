@@ -4,8 +4,6 @@ import { FormEventHandler, useCallback, useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 
-import MeshLogoDark from "@app/assets/Mesh_Logo_Dark.svg";
-import MeshLogoLight from "@app/assets/Mesh_Logo_Light.svg";
 import Hero_Image from "@app/assets/onboard_hero_image.jpg";
 
 import { ConnectTab } from "@components/connection/ConnectTab";
